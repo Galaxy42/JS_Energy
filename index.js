@@ -13,14 +13,20 @@ var masaq;
 var velocidadq;
 var alturaq;
 var velocidadcuadrado;
+var b = document.getElementById("btn");
+var m = document.getElementById("masa");
+var v = document.getElementById("velocidad");
+var h = document.getElementById("altura");
+
+b.addEventListener("click", preguntarDatos);
 
 // Functions
 function preguntarDatos () {
-	masaq = prompt("Indica la masa del cuerpo(En kg)", 1);
+	masaq = m.value;
 	masa = parseInt(masaq);
-	velocidadq = prompt("Y su velocidad?(En m/s)", 20);
+	velocidadq = v.value;
 	velocidad = parseInt(velocidadq);
-	alturaq = prompt("Finalmente, indica la distancia con el suelo(En metros)", 60);
+	alturaq = h.value;
 	altura = parseInt(alturaq);
 
 	velocidadcuadrado = velocidad * velocidad;
@@ -32,6 +38,8 @@ function preguntarDatos () {
 	ePotencial = parseInt(energiaPotencialDecimal);
 
 	energiaMecanica = eCinetica + ePotencial;
-}
 
-preguntarDatos();
+	m.value = "";
+	v.value = "";
+	h.value = "";
+}
