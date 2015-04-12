@@ -3,15 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<!-- CSS StyleSheets -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 </head>
 <body>
-	<h1>Calcula la Enegía Cinética, Potencial Gravitatoria y/o Mecánica</h1>
-	<form>
-		<input type="text" name="masa" id="masa" placeholder="Masa del cuerpo" />
-		<input type="text" name="velocidad" id="velocidad" placeholder="Velocidad del cuerpo" />
-		<input type="text" name="altura" id="altura" placeholder="Altura del cuerpo" />
-		<input type="button" id="btn" value="Tócame">
+	<h1 class="text-center">Calcula la Enegía Cinética, Potencial Gravitatoria y/o Mecánica</h1>
+	<form class="form-horizontal col-md-2 col-md-offset-5">
+		<input type="text" name="masa" id="masa" class="text-center" placeholder="Masa del cuerpo" style="margin-bottom: 1em;" />
+		<input type="text" name="velocidad" id="velocidad" class="text-center" placeholder="Velocidad del cuerpo" style="margin-bottom: 1em;" />
+		<input type="text" name="altura" id="altura" class="text-center" placeholder="Altura del cuerpo" style="margin-bottom: 1em;" />
+		<input type="button" id="btn" class="btn btn-primary" style="margin: 0 auto;" value="Calcular">
 	</form>
+	<div id="results" class="jumbotron" style="margin-top: 15em;">
+		<h2 class="results text-center">Resultados</h2>
+		<h2 id="Ec">Energía Cinética: </h2>
+		<h2 id="Ep">Energía Potencial Gravitatoria: </h2>
+		<h2 id="Em">Energía Mecánica: </h2>
+	</div>
+	<!-- JS Files -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="index.js"></script>
 </body>
 </html>

@@ -19,7 +19,6 @@ var v = document.getElementById("velocidad");
 var h = document.getElementById("altura");
 
 b.addEventListener("click", preguntarDatos);
-
 // Functions
 function preguntarDatos () {
 	masaq = m.value;
@@ -42,4 +41,9 @@ function preguntarDatos () {
 	m.value = "";
 	v.value = "";
 	h.value = "";
+
+	var clone = document.querySelector('#results');
+	clone.querySelector("#Ec").innerHTML = "Energía Cinética: " + energiaCinetica + " Julios";
+	clone.querySelector("#Ep").innerHTML = "Energía Potencial Gravitatoria: " + energiaPotencial + " Julios";
+	clone.querySelector("#Em").innerHTML = "Energía Mecánica: " + energiaMecanica + " Julios";
 }
